@@ -16,7 +16,7 @@
             <h5 class="card-title mb-2">${item.title}</h5>
             <p class="card-text text-muted">${item.description}</p>
             <div class="mt-auto d-flex justify-content-end">
-              <a href="#" class="btn btn-sm btn-outline-light disabled">Detalhes em breve</a>
+              <a href="#" class="btn btn-sm btn-outline-dark disabled">Detalhes em breve</a>
             </div>
           </div>
         </div>
