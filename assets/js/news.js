@@ -2,7 +2,7 @@
   function renderNewsList(){
     const grid = document.getElementById('newsGrid');
     if (!grid || !window.siteData) return;
-    const items = window.siteData.newsItems.slice(0, 6);
+    const items = window.siteData.newsItems;
     const lang = (window.i18n && window.i18n.getCurrentLanguage()) || 'pt';
     const labelViews = lang === 'en' ? 'Views' : 'Visualizações';
     grid.innerHTML = items.map(item => {
