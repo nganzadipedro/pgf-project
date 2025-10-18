@@ -47,7 +47,7 @@
           <div class="text-muted mb-3"><i class="bi bi-eye me-1"></i>${currentViews} ${labelViews}</div>
           <p class="lead">${item.description}</p>
           <p>${item.content}</p>
-          <a href="/noticias.html" class="btn btn-outline-light"><i class="bi bi-arrow-left me-1"></i>Voltar</a>
+          <a href="/noticias.html" class="btn btn-outline-dark"><i class="bi bi-arrow-left me-1"></i>Voltar</a>
         </div>
       </div>`;
   }
