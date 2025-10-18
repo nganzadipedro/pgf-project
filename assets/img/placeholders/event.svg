@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600" role="img" aria-label="Imagem de Evento">
+  <defs>
+    <linearGradient id="gE" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0a0a"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="600" fill="url(#gE)"/>
+  <g opacity="0.25">
+    <circle cx="200" cy="160" r="120" fill="#16a34a"/>
+    <circle cx="760" cy="460" r="200" fill="#22c55e"/>
+  </g>
+  <g fill="#ffffff" opacity="0.92" transform="translate(160,240)">
+    <rect x="0" y="0" width="640" height="20" rx="10"/>
+    <rect x="0" y="36" width="520" height="16" rx="8"/>
+    <rect x="0" y="64" width="580" height="16" rx="8"/>
+  </g>
+  <text x="480" y="540" text-anchor="middle" font-family="Inter, Segoe UI, Arial" font-size="28" font-weight="800" fill="#ffffff">EVENTO</text>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="48" viewBox="0 0 220 48" role="img" aria-label="Unidade Policial Logo">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#16a34a"/>
+      <stop offset="100%" stop-color="#22c55e"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="220" height="48" fill="transparent"/>
+  <g transform="translate(8,4)">
+    <path d="M20 0 L34 6 L34 20 C34 29 27 36 20 40 C13 36 6 29 6 20 L6 6 Z" fill="url(#g)" stroke="#0a0a0a" stroke-width="1.2"/>
+    <path d="M20 10 L27 13 L27 19 C27 24 23 28 20 30 C17 28 13 24 13 19 L13 13 Z" fill="#0a0a0a" opacity="0.82"/>
+  </g>
+  <g transform="translate(58,12)" fill="#0a0a0a">
+    <text x="0" y="16" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="16" font-weight="800" letter-spacing="1.2">UNIDADE POLICIAL</text>
+    <text x="0" y="34" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="10" font-weight="600" fill="#16a34a" letter-spacing="1">SERVIR E PROTEGER</text>
+  </g>
+</svg>

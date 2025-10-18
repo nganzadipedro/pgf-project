@@ -1,0 +1,43 @@
+<footer class="py-5 mt-5">
+  <div class="container">
+    <div class="row g-4 align-items-center">
+      <div class="col-12 col-md-4 logo d-flex align-items-center gap-2">
+        <img src="/assets/img/logo.svg" alt="Logo">
+        <div>
+          <div class="fw-bold">Unidade Policial</div>
+          <div class="text-muted small">Servir e Proteger</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4">
+        <div class="fw-bold mb-2">Links</div>
+        <ul class="list-unstyled m-0">
+          <li><a href="/index.html" class="d-inline-block py-1" data-i18n="nav.home">Início</a></li>
+          <li><a href="/sobre.html" class="d-inline-block py-1" data-i18n="nav.about">Sobre</a></li>
+          <li><a href="/noticias.html" class="d-inline-block py-1" data-i18n="nav.news">Notícias</a></li>
+          <li><a href="/galeria.html" class="d-inline-block py-1" data-i18n="nav.gallery">Galeria</a></li>
+          <li><a href="/eventos.html" class="d-inline-block py-1" data-i18n="nav.events">Eventos</a></li>
+          <li><a href="/contacto.html" class="d-inline-block py-1" data-i18n="nav.contact">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md-4">
+        <div class="fw-bold mb-2">Contacto</div>
+        <ul class="list-unstyled small m-0 text-muted">
+          <li><i class="bi bi-geo-alt me-2"></i>Quartel Central, Cidade</li>
+          <li><i class="bi bi-telephone me-2"></i>+244 900 000 000</li>
+          <li><i class="bi bi-envelope me-2"></i>contato@unidade.pol</li>
+        </ul>
+      </div>
+    </div>
+    <hr class="hr-soft"/>
+    <div class="d-flex justify-content-between align-items-center small text-muted">
+      <div>© <span id="year"></span> Unidade Policial — <span data-i18n="footer.rights">Todos os direitos reservados.</span></div>
+      <div class="d-flex gap-3">
+        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+      </div>
+    </div>
+  </div>
+  <button id="backToTop" class="btn btn-accent position-fixed bottom-0 end-0 m-4 d-none" aria-label="Voltar ao topo"><i class="bi bi-arrow-up"></i></button>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</footer>
