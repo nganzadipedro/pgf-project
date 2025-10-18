@@ -1,0 +1,143 @@
+/* Theme variables */
+:root {
+  --green-500: #16a34a;
+  --green-400: #22c55e;
+  --green-300: #34d399;
+  --black-900: #0a0a0a;
+  --black-800: #111827;
+  --black-700: #1f2937;
+  --white: #ffffff;
+  --muted: #9ca3af;
+  --shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+
+html, body { height: 100%; }
+
+body {
+  font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+  background: var(--black-900);
+  color: var(--white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+/* Navbar */
+.navbar {
+  background: rgba(10,10,10,0.9);
+  backdrop-filter: saturate(140%) blur(6px);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.navbar .navbar-brand img { height: 36px; }
+.navbar .nav-link { color: #e5e7eb; font-weight: 600; }
+.navbar .nav-link:hover, .navbar .nav-link.active { color: var(--green-400); }
+
+.btn-accent {
+  --bs-btn-bg: var(--green-500);
+  --bs-btn-border-color: var(--green-500);
+  --bs-btn-hover-bg: #19994a;
+  --bs-btn-hover-border-color: #19994a;
+  --bs-btn-color: #0a0a0a;
+  --bs-btn-hover-color: #0a0a0a;
+  box-shadow: var(--shadow);
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  min-height: 56vh;
+  display: grid;
+  align-items: center;
+  padding: 6rem 0 4rem;
+  overflow: hidden;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('/assets/img/hero-bg.svg') center/cover no-repeat;
+  opacity: 0.25;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(1200px 600px at 80% 10%, rgba(34,197,94,0.20), transparent 60%),
+              linear-gradient(to bottom right, rgba(22,163,74,0.10), rgba(0,0,0,0.35));
+}
+.hero .container { position: relative; z-index: 1; }
+.hero h1 {
+  font-weight: 900;
+  letter-spacing: 0.5px;
+}
+.hero p.lead { color: #d1d5db; }
+
+.badge-accent {
+  background: linear-gradient(90deg, var(--green-500), var(--green-400));
+  color: var(--black-900);
+  font-weight: 800;
+}
+
+/* Cards */
+.card {
+  background: #0f1320;
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,0,0,0.45); border-color: rgba(34,197,94,0.35); }
+.card-img-top { object-fit: cover; height: 200px; }
+.card .views { color: var(--muted); font-weight: 600; }
+
+/* Event styling differentiation */
+.card.event {
+  background: #0d1320;
+  border-left: 3px solid var(--green-400);
+}
+.card.event .badge { background: rgba(34,197,94,0.1); color: #a7f3d0; border: 1px solid rgba(34,197,94,0.25); }
+
+/* Gallery */
+.gallery-card .carousel-item img { height: 220px; object-fit: cover; }
+
+/* Footer */
+footer {
+  background: #0a0f1a;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+footer .logo img { height: 36px; }
+footer a { color: #d1d5db; text-decoration: none; }
+footer a:hover { color: var(--green-400); }
+
+/* Scroll reveal */
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+.reveal.show { opacity: 1; transform: none; }
+
+/* Utilities */
+.text-gradient {
+  background: linear-gradient(90deg, #fff, #b7fab7); -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.fw-black { font-weight: 900 !important; }
+.hr-soft { border: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent); margin: 2rem 0; }
+
+/* Forms */
+.form-control, .form-select {
+  background: #0c1220;
+  color: #e5e7eb;
+  border-color: rgba(255,255,255,0.08);
+}
+.form-control:focus, .form-select:focus {
+  border-color: rgba(34,197,94,0.45);
+  box-shadow: 0 0 0 .25rem rgba(34,197,94,0.15);
+}
+
+/* Buttons */
+.btn-outline-light:hover { background: var(--white); color: var(--black-900); border-color: var(--white); }
+
+/* Media tweaks */
+@media (min-width: 992px) {
+  .hero { min-height: 64vh; }
+  .card-img-top { height: 240px; }
+}
