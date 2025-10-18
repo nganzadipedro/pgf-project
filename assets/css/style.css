@@ -103,6 +103,7 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* Gallery */
 .gallery-card .carousel-item img { height: 220px; object-fit: cover; }
+.gallery-card .carousel-item img { cursor: zoom-in; }
 
 /* Footer */
 footer {

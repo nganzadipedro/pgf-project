@@ -40,5 +40,41 @@
     grid.innerHTML = Array.from({length: 6}).map((_,i) => createGalleryCard(i+1)).join('');
   }
 
-  document.addEventListener('partials:loaded', renderGallery);
+  function setupLightbox(){
+    // Ensure a single lightbox modal exists
+    if (!document.getElementById('galleryLightbox')){
+      const modalWrapper = document.createElement('div');
+      modalWrapper.innerHTML = `
+      <div class="modal fade" id="galleryLightbox" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content bg-black">
+            <div class="modal-body p-0">
+              <img id="galleryLightboxImg" class="img-fluid w-100" alt="Preview"/>
+            </div>
+          </div>
+        </div>
+      </div>`;
+      document.body.appendChild(modalWrapper.firstElementChild);
+    }
+
+    const modalEl = document.getElementById('galleryLightbox');
+    const imgEl = document.getElementById('galleryLightboxImg');
+    const bootstrapModal = () => window.bootstrap && new window.bootstrap.Modal(modalEl);
+
+    // Delegate click handlers to gallery images
+    document.querySelectorAll('.gallery-card .carousel-item img').forEach(img => {
+      img.addEventListener('click', () => {
+        if (!imgEl || !modalEl) return;
+        imgEl.src = img.getAttribute('src');
+        const instance = bootstrapModal();
+        if (instance) instance.show();
+      });
+    });
+  }
+
+  document.addEventListener('partials:loaded', () => {
+    renderGallery();
+    // Setup lightbox after DOM is populated
+    setupLightbox();
+  });
 })();
